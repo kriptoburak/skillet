@@ -5,47 +5,137 @@
   "skills": [
     {
       "name": "pdf",
-      "description": "Extract text and tables from PDFs, fill forms, merge/split, and create new PDFs.",
+      "description": "Extract text and tables from PDFs, fill forms, merge/split, OCR, and create new PDFs. Use for anything involving a .pdf.",
       "repo": "anthropics/skills",
       "path": "skills/pdf",
       "ref": "main",
-      "keywords": ["pdf", "documents", "extraction", "forms"],
+      "keywords": ["pdf", "documents", "extraction", "forms", "ocr"],
       "license": "source-available"
     },
     {
       "name": "pptx",
-      "description": "Create, edit and analyze PowerPoint presentations: layouts, templates, charts, slide generation.",
+      "description": "Create, edit and analyze PowerPoint presentations: layouts, templates, charts, automated slide generation.",
       "repo": "anthropics/skills",
       "path": "skills/pptx",
       "ref": "main",
-      "keywords": ["pptx", "powerpoint", "slides", "documents"],
+      "keywords": ["pptx", "powerpoint", "slides", "presentations", "documents"],
       "license": "source-available"
     },
     {
       "name": "docx",
-      "description": "Create, edit and analyze Word documents with tracked changes, comments and formatting.",
+      "description": "Create, edit and analyze Word documents with tracked changes, comments and formatting preservation.",
       "repo": "anthropics/skills",
       "path": "skills/docx",
       "ref": "main",
-      "keywords": ["docx", "word", "documents"],
+      "keywords": ["docx", "word", "documents", "writing"],
       "license": "source-available"
     },
     {
       "name": "xlsx",
-      "description": "Read, write and analyze Excel spreadsheets including formulas and charts.",
+      "description": "Open, read, edit, format, chart and create spreadsheets (.xlsx/.xlsm/.csv/.tsv), including formulas and data cleaning.",
       "repo": "anthropics/skills",
       "path": "skills/xlsx",
       "ref": "main",
-      "keywords": ["xlsx", "excel", "spreadsheets", "data"],
+      "keywords": ["xlsx", "excel", "spreadsheets", "csv", "data"],
       "license": "source-available"
     },
     {
       "name": "skill-creator",
-      "description": "A skill that helps you author new, well-structured agent skills.",
+      "description": "Author new, well-structured agent skills — scaffolding, conventions and best practices for writing SKILL.md.",
       "repo": "anthropics/skills",
       "path": "skills/skill-creator",
       "ref": "main",
-      "keywords": ["meta", "authoring", "scaffold"],
+      "keywords": ["meta", "authoring", "scaffold", "skills"],
+      "license": "source-available"
+    },
+    {
+      "name": "mcp-builder",
+      "description": "Scaffold and build Model Context Protocol (MCP) servers that expose tools to agents.",
+      "repo": "anthropics/skills",
+      "path": "skills/mcp-builder",
+      "ref": "main",
+      "keywords": ["mcp", "tools", "servers", "integration"],
+      "license": "source-available"
+    },
+    {
+      "name": "claude-api",
+      "description": "Build with the Claude API: models, tool use, streaming, and Anthropic SDK usage.",
+      "repo": "anthropics/skills",
+      "path": "skills/claude-api",
+      "ref": "main",
+      "keywords": ["claude", "anthropic", "api", "sdk", "llm"],
+      "license": "source-available"
+    },
+    {
+      "name": "frontend-design",
+      "description": "Design and build polished, modern frontend UI and components.",
+      "repo": "anthropics/skills",
+      "path": "skills/frontend-design",
+      "ref": "main",
+      "keywords": ["frontend", "ui", "design", "web", "css"],
+      "license": "source-available"
+    },
+    {
+      "name": "canvas-design",
+      "description": "Compose graphics on an HTML canvas — posters, social images, layouts.",
+      "repo": "anthropics/skills",
+      "path": "skills/canvas-design",
+      "ref": "main",
+      "keywords": ["canvas", "design", "graphics", "images"],
+      "license": "source-available"
+    },
+    {
+      "name": "algorithmic-art",
+      "description": "Generate algorithmic / generative art and visual patterns in code.",
+      "repo": "anthropics/skills",
+      "path": "skills/algorithmic-art",
+      "ref": "main",
+      "keywords": ["art", "generative", "creative", "visual"],
+      "license": "source-available"
+    },
+    {
+      "name": "theme-factory",
+      "description": "Generate cohesive visual themes — color systems, type scales and design tokens.",
+      "repo": "anthropics/skills",
+      "path": "skills/theme-factory",
+      "ref": "main",
+      "keywords": ["theme", "design", "colors", "tokens", "branding"],
+      "license": "source-available"
+    },
+    {
+      "name": "brand-guidelines",
+      "description": "Apply a brand's guidelines (colors, typography, voice) consistently when producing assets.",
+      "repo": "anthropics/skills",
+      "path": "skills/brand-guidelines",
+      "ref": "main",
+      "keywords": ["brand", "design", "guidelines", "marketing"],
+      "license": "source-available"
+    },
+    {
+      "name": "doc-coauthoring",
+      "description": "Collaboratively draft and edit long-form documents with the user.",
+      "repo": "anthropics/skills",
+      "path": "skills/doc-coauthoring",
+      "ref": "main",
+      "keywords": ["writing", "documents", "editing", "collaboration"],
+      "license": "source-available"
+    },
+    {
+      "name": "internal-comms",
+      "description": "Write clear internal communications — announcements, updates, and team messaging.",
+      "repo": "anthropics/skills",
+      "path": "skills/internal-comms",
+      "ref": "main",
+      "keywords": ["writing", "communications", "workplace"],
+      "license": "source-available"
+    },
+    {
+      "name": "slack-gif-creator",
+      "description": "Create animated GIFs sized and optimized for Slack.",
+      "repo": "anthropics/skills",
+      "path": "skills/slack-gif-creator",
+      "ref": "main",
+      "keywords": ["gif", "slack", "animation", "fun"],
       "license": "source-available"
     }
   ]

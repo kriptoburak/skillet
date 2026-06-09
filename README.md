@@ -126,6 +126,14 @@ Early MVP — discovery, install (registry / GitHub / local), lockfile pinning,
 authoring and validation all work today. Star/watch to follow along; PRs and new
 registry entries are the most useful contribution right now.
 
+## Sibling projects
+
+Part of a small, local-first, zero-dependency toolkit for building AI agents:
+
+- 🍳 **skillet** — a package manager for agent skills *(this repo)*
+- 🔭 **[tracelet](https://github.com/USER/tracelet)** — local DevTools to debug agent runs
+- 🧠 **[engram](https://github.com/USER/engram)** — a local, private memory layer for agents (and you)
+
 ## License
 
 MIT — see [LICENSE](LICENSE). (Skills installed *through* skillet keep their own
