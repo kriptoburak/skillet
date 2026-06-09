@@ -59,6 +59,17 @@ npx skillet add ./skills/my-local-skill          # a local folder
 Skills install into `.claude/skills/` by default (the common 2026 convention).
 Change it per-project with `skillet init` or `--dir`.
 
+## Browse the registry
+
+```bash
+npx skillet gallery        # builds a static, searchable HTML gallery → site/
+```
+
+`skillet gallery` renders [`registry/index.json`](registry/index.json) into a
+single self-contained page (search, copy-to-install, links) — zero backend. The
+included GitHub Pages workflow rebuilds and publishes it automatically whenever
+the registry changes, so the registry has a shareable home.
+
 ## Authoring a skill
 
 ```bash

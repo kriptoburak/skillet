@@ -7,6 +7,7 @@ import { loadConfig, saveConfig, DEFAULTS } from './config.js';
 import { fetchIndex, searchIndex } from './registry.js';
 import { addSkill, removeSkill, listSkills, updateSkill } from './install.js';
 import { parseFrontmatter, validateSkill } from './frontmatter.js';
+import { generateGallery } from './gallery.js';
 
 function parseArgs(argv) {
   const flags = {};
@@ -17,6 +18,7 @@ function parseArgs(argv) {
     else if (a === '--json') flags.json = true;
     else if (a === '--dir') flags.dir = argv[++i];
     else if (a === '--registry') flags.registry = argv[++i];
+    else if (a === '--out') flags.out = argv[++i];
     else if (a === '-h' || a === '--help') flags.help = true;
     else if (a === '-v' || a === '--version') flags.version = true;
     else pos.push(a);
@@ -37,6 +39,7 @@ ${c.bold('Commands')}
   ${c.cyan('update')} [name]        re-install tracked skill(s) at the latest ref
   ${c.cyan('new')} <name>           scaffold a new SKILL.md skill folder
   ${c.cyan('validate')} [path]      validate a SKILL.md (default: ./)
+  ${c.cyan('gallery')}              build a static, browsable HTML gallery of the registry
   ${c.cyan('init')}                 create skillet.json in this project
 
 ${c.bold('Flags')}
@@ -175,6 +178,20 @@ const commands = {
     for (const w of warnings) warn(w);
     if (valid) ok(`${file} is a valid skill${warnings.length ? ' (with warnings)' : ''}`);
     if (!valid) process.exitCode = 1;
+  },
+
+  async gallery(_args, flags) {
+    // Default to the bundled registry file so `skillet gallery` works in-repo.
+    const bundled = fileURLToPath(new URL('../registry/index.json', import.meta.url));
+    const source = flags.registry || bundled;
+    const index = await fetchIndex(source);
+    const html = generateGallery(index);
+    const outDir = flags.out || 'site';
+    fs.mkdirSync(outDir, { recursive: true });
+    const outFile = join(outDir, 'index.html');
+    fs.writeFileSync(outFile, html);
+    ok(`wrote ${outFile} (${index.skills.length} skills)`);
+    log(c.dim(`  preview: open ${outFile}  ·  deploy the "${outDir}" folder to GitHub Pages`));
   },
 
   init(_args, flags) {

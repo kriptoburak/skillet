@@ -9,6 +9,7 @@ import { parseFrontmatter, validateSkill } from '../src/frontmatter.js';
 import { resolveRef } from '../src/source.js';
 import { searchIndex, findInIndex, entryToSpec, fetchIndex } from '../src/registry.js';
 import { addSkill, listSkills, removeSkill, updateSkill } from '../src/install.js';
+import { generateGallery } from '../src/gallery.js';
 
 const HELLO = fileURLToPath(new URL('../examples/skills/hello-world', import.meta.url));
 const INDEX = fileURLToPath(new URL('../registry/index.json', import.meta.url));
@@ -129,6 +130,28 @@ test('install from a local folder: copy + lockfile + list + remove', async () =>
   assert.equal(lock2.skills['hello-world'], undefined);
 
   fs.rmSync(cwd, { recursive: true, force: true });
+});
+
+// --------------------------------------------------------------- gallery ---
+test('gallery: renders all skills, escapes HTML, includes install commands', async () => {
+  const index = await fetchIndex(INDEX);
+  const html = generateGallery(index, { title: 'skillet' });
+  assert.match(html, /<!doctype html>/i);
+  // every skill name and its install command appears
+  for (const s of index.skills) {
+    assert.ok(html.includes(`>${s.name}</h3>`), `missing card for ${s.name}`);
+    assert.ok(html.includes(`npx skillet add ${s.name}`), `missing install cmd for ${s.name}`);
+  }
+  // count is reflected
+  assert.ok(html.includes(`${index.skills.length} skills`));
+});
+
+test('gallery: escapes injection in skill fields', () => {
+  const html = generateGallery({
+    skills: [{ name: 'x', description: '<img src=x onerror=alert(1)>', keywords: ['"</style>'] }],
+  });
+  assert.ok(!html.includes('<img src=x onerror'), 'description must be escaped');
+  assert.ok(html.includes('&lt;img src=x onerror'));
 });
 
 test('install rejects a folder without SKILL.md', async () => {

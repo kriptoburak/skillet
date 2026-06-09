@@ -6,3 +6,5 @@ dist/
 .env.local
 # don't ignore the example install target; do ignore real local test installs
 .claude/skills/
+# generated gallery output (built by `skillet gallery` / Pages workflow)
+site/
