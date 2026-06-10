@@ -49,31 +49,52 @@ No narration, loop-friendly. Tools: Kap / QuickTime + Gifski.
 > Git repo served over raw GitHub — like a Homebrew tap, or shadcn/ui's registry,
 > applied to skills. Zero runtime deps (Node built-ins + your git), MIT.
 >
-> It installs real skills today — 22 in the seed registry: all of Anthropic's
+> It installs real skills today — 26 in the seed registry: all of Anthropic's
 > (pdf/pptx/docx/xlsx, mcp-builder, …) plus first-party ones like
-> conventional-commits and repo-onboarding. I'd love feedback on the registry
-> format and what skills you'd want listed.
+> conventional-commits, systematic-debugging and repo-onboarding. I'd love
+> feedback on the registry format and what skills you'd want listed.
 > Repo: https://github.com/jnMetaCode/skillet · browse the registry:
 > https://jnmetacode.github.io/skillet/
 
 Post Tue/Wed ~8am PT. Reply to every comment for 3 hours.
 
-## Other channels
+## Other channels — ready-to-paste drafts
 
-- r/LocalLLaMA, r/ClaudeAI, r/LLMDevs — lead with the GIF.
-- X: thread tagging the Claude / agent-skills community; "npm for skills".
-- A "how to publish a skill" post that doubles as registry-growth funnel.
-- GitHub topics: `ai-agents`, `agent-skills`, `claude`, `package-manager`,
-  `skills`, `mcp`, `cli`.
+**r/ClaudeAI / r/LLMDevs** (1–2 days after HN):
+
+> **Title:** skillet: npm for agent skills — install SKILL.md skills with SHA pinning, registry is just a JSON file in a Git repo
+>
+> Skills (a SKILL.md folder that teaches an agent a capability) are great, but
+> sharing them is copy-paste with no versioning. skillet gives them the npm
+> treatment: `npx @jnmetacode/skillet add pdf` resolves a registry name, shallow-clones,
+> copies the folder into `.claude/skills/`, and pins the commit SHA in a
+> lockfile — `skillet install` reproduces the exact set on a teammate's
+> machine. No backend: the registry is one JSON file served over raw GitHub.
+> 26 skills seeded (all of Anthropic's + first-party ones). Browse:
+> https://jnmetacode.github.io/skillet/ · Repo: https://github.com/jnMetaCode/skillet
+> Also runs as an MCP server, so the agent can find and install skills for itself.
+
+**X thread**: 1/ "skills are taking over, sharing them hasn't caught up — I
+built npm for SKILL.md" [GIF] · 2/ install = copy into your repo + SHA pin
+(shadcn-style, not node_modules-style) · 3/ the registry is a JSON file in a
+Git repo, publishing is a PR · 4/ MCP server: "find a PDF skill and install
+it" just works in Claude.
+
+A "how to publish a skill" post doubles as the registry-growth funnel.
+GitHub topics (already set): `ai-agents`, `agent-skills`, `claude`,
+`package-manager`, `skills`, `mcp`, `cli`.
 
 ## Flywheel (this is the real growth engine)
 
 The registry is the moat. Every author who PRs a skill brings their users.
 Prioritize, in order:
 1. Make `skillet new → validate → PR` frictionless (lower the publish barrier).
-2. Recruit 10–20 quality skills before launch day.
-3. A web page that renders `registry/index.json` as a browsable gallery (static
-   site from the JSON — still zero backend).
+2. ~~Recruit quality skills before launch day~~ → **done: 26 seeded (9
+   first-party + all 17 of Anthropic's), every entry verified to resolve.**
+3. ~~A browsable gallery from the JSON~~ → **done:
+   https://jnmetacode.github.io/skillet/ (auto-redeploys on registry change).**
+4. Post-launch: convert the `skill-submission` issue template traffic into
+   PRs; feature new community skills in the gallery.
 
 ## After traction
 
