@@ -50,7 +50,7 @@ npx @jnmetacode/skillet gallery               # → site/index.html (searchable,
 ## Use it from your AI assistant (MCP)
 
 ```json
-{ "mcpServers": { "skillet": { "command": "npx", "args": ["-y", "skillet", "mcp"] } } }
+{ "mcpServers": { "skillet": { "command": "npx", "args": ["-y", "@jnmetacode/skillet", "mcp"] } } }
 ```
 
 Now an assistant can `skillet_search` and `skillet_install` skills for itself.

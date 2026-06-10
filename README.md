@@ -11,6 +11,8 @@ No server, no account, no lock-in. Just `npx @jnmetacode/skillet add <skill>`.
 npx @jnmetacode/skillet add pdf
 ```
 
+English | [简体中文](./README.zh-CN.md)
+
 ![skillet demo — search, install (SHA-pinned), scaffold and validate](docs/demo.gif)
 
 </div>
@@ -74,7 +76,7 @@ project `.mcp.json`):
   "mcpServers": {
     "skillet": {
       "command": "npx",
-      "args": ["-y", "skillet", "mcp"]
+      "args": ["-y", "@jnmetacode/skillet", "mcp"]
     }
   }
 }
