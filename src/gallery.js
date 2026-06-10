@@ -23,7 +23,7 @@ function card(s) {
   <header><h3>${esc(s.name)}</h3>${s.license ? `<span class="lic">${esc(s.license)}</span>` : ''}</header>
   <p class="desc">${esc(s.description || '')}</p>
   <div class="tags">${kw}</div>
-  <div class="add"><code>npx skillet add ${esc(s.name)}</code><button class="copy" data-cmd="npx skillet add ${esc(s.name)}" aria-label="copy">copy</button></div>
+  <div class="add"><code>npx @jnmetacode/skillet add ${esc(s.name)}</code><button class="copy" data-cmd="npx @jnmetacode/skillet add ${esc(s.name)}" aria-label="copy">copy</button></div>
   ${repoLink}
 </article>`;
 }
@@ -80,7 +80,7 @@ footer a{color:var(--accent);text-decoration:none}
   <div class="hero">
     <h1>🍳 ${esc(title)}</h1>
     <p class="sub">A package manager for AI agent skills. Install any of these with one command.</p>
-    <code>npx skillet add &lt;name&gt;</code>
+    <code>npx @jnmetacode/skillet add &lt;name&gt;</code>
   </div>
   <div class="bar">
     <input id="q" type="search" placeholder="Search ${skills.length} skills…" autocomplete="off" autofocus />

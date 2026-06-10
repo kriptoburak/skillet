@@ -29,7 +29,7 @@ Everything after the frontmatter is the instruction body the agent reads.
 Validate yours:
 
 ```bash
-npx skillet validate ./my-skill
+npx @jnmetacode/skillet validate ./my-skill
 ```
 
 ## The registry

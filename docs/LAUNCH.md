@@ -5,22 +5,24 @@ if you prefer to keep it private.
 
 ## Pre-flight
 
-- [ ] Replace `USER` in `package.json`, `src/config.js`, and docs with the real
-      GitHub org/user (the default registry URL points there).
-- [ ] Confirm npm name `skillet` is free (`npm view skillet`); fallbacks:
-      `skillet-cli`, `agent-skillet`, `skillpm`, `skld`.
+- [x] Replace `USER` in `package.json`, `src/config.js`, and docs with the real
+      GitHub org/user (the default registry URL points there) → **jnMetaCode**. *(done)*
+- [x] **npm name decided → `@jnmetacode/skillet`** (unscoped `skillet` is taken;
+      scoped keeps the brand, bin stays `skillet`). Claim the `jnmetacode` npm
+      username/org before publishing — see engram's `docs/LAUNCH.md` for the
+      scope-claim steps. *(name set in package.json + docs)*
 - [ ] Seed `registry/index.json` with 8–15 genuinely useful skills (more than the
       5 Anthropic ones) — registries live or die on day-one content.
 - [ ] Record the hero GIF (script below) → `docs/demo.gif`, uncomment in README.
 - [ ] Add `NPM_TOKEN` secret; `git tag v0.1.0 && git push --tags` to publish.
-- [ ] Verify `npx skillet add pdf` works from a clean machine.
+- [ ] Verify `npx @jnmetacode/skillet add pdf` works from a clean machine.
 
 ## Hero GIF (15–25s) — highest-leverage asset
 
-1. `npx skillet search pdf` → clean list of results.
-2. `npx skillet add pdf` → "✓ installed pdf → .claude/skills/pdf · pinned <sha>".
+1. `npx @jnmetacode/skillet search pdf` → clean list of results.
+2. `npx @jnmetacode/skillet add pdf` → "✓ installed pdf → .claude/skills/pdf · pinned <sha>".
 3. `ls .claude/skills/pdf` → real files appear.
-4. `npx skillet new my-skill` → scaffold, then `skillet validate ./my-skill` ✓.
+4. `npx @jnmetacode/skillet new my-skill` → scaffold, then `skillet validate ./my-skill` ✓.
 
 No narration, loop-friendly. Tools: Kap / QuickTime + Gifski.
 
@@ -34,7 +36,7 @@ No narration, loop-friendly. Tools: Kap / QuickTime + Gifski.
 > everywhere now, but sharing them is copy-paste from random repos with no
 > versioning or discovery.
 >
-> Skillet is a package manager for them. `npx skillet add pdf` finds the skill in
+> Skillet is a package manager for them. `npx @jnmetacode/skillet add pdf` finds the skill in
 > a registry, `git clone --depth 1`s it, copies the folder into your
 > `.claude/skills/`, and pins the commit SHA in a lockfile. `skillet new` +
 > `skillet validate` help you author your own; publishing is a PR that appends one

@@ -18,33 +18,33 @@ From the repo root:
 
 ```bash
 # discover what's in the registry
-npx skillet search pdf
+npx @jnmetacode/skillet search pdf
 #   pdf — Extract text and tables from PDFs, fill forms, merge/split, OCR…
 
 # install a real skill from the registry (clones anthropics/skills, pins the SHA)
-npx skillet add pdf
+npx @jnmetacode/skillet add pdf
 #   ✓ installed pdf → .claude/skills/pdf   (pinned <sha> in skillet.lock.json)
 
 # install the bundled LOCAL example skill (offline — no git needed)
-npx skillet add ./examples/skills/hello-world
-npx skillet list
+npx @jnmetacode/skillet add ./examples/skills/hello-world
+npx @jnmetacode/skillet list
 
 # reproduce everything from the lockfile (e.g. on a teammate's machine)
-npx skillet install
+npx @jnmetacode/skillet install
 ```
 
 ## Author your own
 
 ```bash
-npx skillet new my-skill          # scaffolds my-skill/SKILL.md
-npx skillet validate ./my-skill   # checks the frontmatter
+npx @jnmetacode/skillet new my-skill          # scaffolds my-skill/SKILL.md
+npx @jnmetacode/skillet validate ./my-skill   # checks the frontmatter
 # push to GitHub, then PR one line into registry/index.json (see docs/SPEC.md)
 ```
 
 ## Browse the registry as a web page
 
 ```bash
-npx skillet gallery               # → site/index.html (searchable, zero backend)
+npx @jnmetacode/skillet gallery               # → site/index.html (searchable, zero backend)
 ```
 
 ## Use it from your AI assistant (MCP)

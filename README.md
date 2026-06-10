@@ -5,10 +5,10 @@
 ### A package manager for AI agent skills
 
 **Find, install, version and share `SKILL.md` skills — from a Git-backed registry.**
-No server, no account, no lock-in. Just `npx skillet add <skill>`.
+No server, no account, no lock-in. Just `npx @jnmetacode/skillet add <skill>`.
 
 ```bash
-npx skillet add pdf
+npx @jnmetacode/skillet add pdf
 ```
 
 <!-- TODO: replace with a real screen recording before launch -->
@@ -28,10 +28,10 @@ project, a lockfile so it's reproducible, and a registry that's just a JSON file
 in a Git repo — so there's nothing to host and anyone can contribute with a PR.
 
 ```bash
-npx skillet search pdf            # discover
-npx skillet add pdf               # install into .claude/skills/
-npx skillet list                  # see what's installed
-npx skillet new my-skill          # scaffold your own
+npx @jnmetacode/skillet search pdf            # discover
+npx @jnmetacode/skillet add pdf               # install into .claude/skills/
+npx @jnmetacode/skillet list                  # see what's installed
+npx @jnmetacode/skillet new my-skill          # scaffold your own
 ```
 
 ## Why skillet
@@ -53,11 +53,11 @@ npx skillet new my-skill          # scaffold your own
 ## Install targets
 
 ```bash
-npx skillet add pdf                              # from the registry
-npx skillet add anthropics/skills/skills/pptx    # any GitHub repo + subpath
-npx skillet add owner/repo#v2.1.0                # a tag/branch
-npx skillet add owner/repo#<commit-sha>          # pin to an exact commit
-npx skillet add ./skills/my-local-skill          # a local folder
+npx @jnmetacode/skillet add pdf                              # from the registry
+npx @jnmetacode/skillet add anthropics/skills/skills/pptx    # any GitHub repo + subpath
+npx @jnmetacode/skillet add owner/repo#v2.1.0                # a tag/branch
+npx @jnmetacode/skillet add owner/repo#<commit-sha>          # pin to an exact commit
+npx @jnmetacode/skillet add ./skills/my-local-skill          # a local folder
 ```
 
 Skills install into `.claude/skills/` by default (the common 2026 convention).
@@ -87,7 +87,7 @@ Tools exposed: `skillet_search`, `skillet_install` (registry-only, name-validate
 ## Browse the registry
 
 ```bash
-npx skillet gallery        # builds a static, searchable HTML gallery → site/
+npx @jnmetacode/skillet gallery        # builds a static, searchable HTML gallery → site/
 ```
 
 `skillet gallery` renders [`registry/index.json`](registry/index.json) into a
@@ -98,9 +98,9 @@ the registry changes, so the registry has a shareable home.
 ## Authoring a skill
 
 ```bash
-npx skillet new web-scraper      # creates web-scraper/SKILL.md from a template
+npx @jnmetacode/skillet new web-scraper      # creates web-scraper/SKILL.md from a template
 # edit it…
-npx skillet validate ./web-scraper
+npx @jnmetacode/skillet validate ./web-scraper
 ```
 
 A skill is just a folder with a `SKILL.md`:

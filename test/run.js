@@ -142,7 +142,7 @@ test('gallery: renders all skills, escapes HTML, includes install commands', asy
   // every skill name and its install command appears
   for (const s of index.skills) {
     assert.ok(html.includes(`>${s.name}</h3>`), `missing card for ${s.name}`);
-    assert.ok(html.includes(`npx skillet add ${s.name}`), `missing install cmd for ${s.name}`);
+    assert.ok(html.includes(`npx @jnmetacode/skillet add ${s.name}`), `missing install cmd for ${s.name}`);
   }
   // count is reflected
   assert.ok(html.includes(`${index.skills.length} skills`));

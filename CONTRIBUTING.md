@@ -9,7 +9,7 @@ to [`registry/index.json`](registry/index.json). See
 [docs/SPEC.md](docs/SPEC.md) for the entry format. Requirements:
 
 - The skill lives in a public Git repo and has a valid `SKILL.md`
-  (`npx skillet validate <path>` passes).
+  (`npx @jnmetacode/skillet validate <path>` passes).
 - `name` is unique in the registry and kebab-case.
 - `description` says what it does **and when to use it** (it's what people search).
 

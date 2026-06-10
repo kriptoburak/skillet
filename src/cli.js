@@ -54,11 +54,11 @@ ${c.bold('Flags')}
   -v, --version        show version
 
 ${c.bold('Examples')}
-  npx skillet search pdf
-  npx skillet add pdf-extractor
-  npx skillet add anthropics/skills/document-skills/pdf
-  npx skillet add ./my-skill
-  npx skillet new web-scraper`;
+  npx @jnmetacode/skillet search pdf
+  npx @jnmetacode/skillet add pdf-extractor
+  npx @jnmetacode/skillet add anthropics/skills/document-skills/pdf
+  npx @jnmetacode/skillet add ./my-skill
+  npx @jnmetacode/skillet new web-scraper`;
 
 function cfgWith(flags) {
   const cwd = process.cwd();
