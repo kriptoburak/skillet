@@ -167,7 +167,7 @@ registry entries are the most useful contribution right now.
 
 ## Sibling projects
 
-Part of a small, local-first, zero-dependency toolkit for building AI agents:
+Part of a small, local-first, zero-dependency toolkit for building AI agents — see the [toolkit overview & end-to-end recipe](https://github.com/jnMetaCode/local-agent-toolkit):
 
 - 🍳 **skillet** — a package manager for agent skills *(this repo)*
 - 🔭 **[tracelet](https://github.com/jnMetaCode/tracelet)** — local DevTools to debug agent runs
