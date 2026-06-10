@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-10",
+  "updated": "2026-06-11",
   "note": "Community registry for AI agent skills. Add yours via PR — see docs/SPEC.md. Entries point at a SKILL.md folder in a public Git repo.",
   "skills": [
     {
@@ -148,6 +148,20 @@
       "license": "source-available"
     },
     {
+      "name": "incident-postmortem",
+      "description": "Write a blameless, actionable incident postmortem from the raw facts. Use after an outage or when writing up \"what happened\".",
+      "repo": "jnMetaCode/skillet",
+      "path": "skills/incident-postmortem",
+      "ref": "main",
+      "keywords": [
+        "postmortem",
+        "incident",
+        "sre",
+        "writing"
+      ],
+      "license": "MIT"
+    },
+    {
       "name": "internal-comms",
       "description": "Write clear internal communications — announcements, updates, and team messaging.",
       "repo": "anthropics/skills",
@@ -205,6 +219,20 @@
       "license": "source-available"
     },
     {
+      "name": "pr-description",
+      "description": "Write a reviewer-first pull-request description from the actual branch diff. Use when opening a PR or asked to write/improve a PR description.",
+      "repo": "jnMetaCode/skillet",
+      "path": "skills/pr-description",
+      "ref": "main",
+      "keywords": [
+        "git",
+        "pull-request",
+        "review",
+        "workflow"
+      ],
+      "license": "MIT"
+    },
+    {
       "name": "repo-onboarding",
       "description": "Systematically map an unfamiliar codebase before changing it — entry points, build/test loop, conventions, data flow. Use when starting work in a repo you haven't seen.",
       "repo": "jnMetaCode/skillet",
@@ -245,6 +273,34 @@
         "fun"
       ],
       "license": "source-available"
+    },
+    {
+      "name": "systematic-debugging",
+      "description": "Root-cause a bug with a hypothesis-driven loop instead of shotgun edits. Use when a bug isn't obvious after the first look.",
+      "repo": "jnMetaCode/skillet",
+      "path": "skills/systematic-debugging",
+      "ref": "main",
+      "keywords": [
+        "debugging",
+        "root-cause",
+        "bisect",
+        "methodology"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "test-writing",
+      "description": "Write tests that catch real regressions — behavior-focused, minimal mocking, edge cases from the code's actual branches. Use when adding or backfilling tests.",
+      "repo": "jnMetaCode/skillet",
+      "path": "skills/test-writing",
+      "ref": "main",
+      "keywords": [
+        "testing",
+        "unit-tests",
+        "regression",
+        "quality"
+      ],
+      "license": "MIT"
     },
     {
       "name": "theme-factory",
