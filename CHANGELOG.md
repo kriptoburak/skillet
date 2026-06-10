@@ -5,6 +5,11 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-06-11
+### Added
+- A passing `skillet validate` now prints the ready-to-paste registry entry
+  for publishing the skill (prefilled from the SKILL.md frontmatter).
+
 ## [0.1.1] - 2026-06-11
 ### Fixed
 - The demo GIF and the 中文 README link now render on the npm package page
@@ -32,6 +37,7 @@ First public release.
   (registry-only, name-validated) / `skillet_list`.
 - Security: path-traversal guard on skill names, even with `--force`.
 
-[Unreleased]: https://github.com/jnMetaCode/skillet/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/jnMetaCode/skillet/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/jnMetaCode/skillet/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/jnMetaCode/skillet/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/jnMetaCode/skillet/releases/tag/v0.1.0
