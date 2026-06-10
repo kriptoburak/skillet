@@ -15,7 +15,8 @@ if you prefer to keep it private.
       plus 5 first-party skills hosted in this repo (`skills/`): engram-memory,
       tracelet-instrument, conventional-commits, changelog, repo-onboarding.
       Every entry verified to resolve; live `search`+`add` tested. *(done)*
-- [ ] Record the hero GIF (script below) → `docs/demo.gif`, uncomment in README.
+- [x] Record the hero GIF (script below) → `docs/demo.gif`, linked in README.
+      *(done — vhs-recorded; re-record any time with `docs/demo.tape`)*
 - [ ] Add `NPM_TOKEN` secret; `git tag v0.1.0 && git push --tags` to publish.
 - [ ] Verify `npx @jnmetacode/skillet add pdf` works from a clean machine.
 

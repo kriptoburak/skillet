@@ -11,8 +11,7 @@ No server, no account, no lock-in. Just `npx @jnmetacode/skillet add <skill>`.
 npx @jnmetacode/skillet add pdf
 ```
 
-<!-- TODO: replace with a real screen recording before launch -->
-<!-- ![skillet demo](docs/demo.gif) -->
+![skillet demo — search, install (SHA-pinned), scaffold and validate](docs/demo.gif)
 
 </div>
 
