@@ -1,0 +1,21 @@
+name: Submit a skill to the registry
+description: Propose a SKILL.md skill for the public registry (or just open a PR directly)
+labels: [registry]
+body:
+  - type: input
+    attributes:
+      label: Skill repo + path
+      placeholder: "your-org/your-repo · skills/web-scraper"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: One-line description (what it does AND when an agent should use it)
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Checklist
+      options:
+        - label: "`skillet validate ./my-skill` passes"
+        - label: The repo is public and MIT/Apache/BSD-licensed (or states its license)
